@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Band Name Generator</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Band Name Generator</h1>
+    <label for="cityInput">Enter the name of the city you grew up in:</label>
+    <input type="text" id="cityInput">
+    <br>
+    <label for="petInput">Enter your pet's name or the name you would give to a pet:</label>
+    <input type="text" id="petInput">
+    <br>
+    <button onclick="generateBandName()">Generate Band Name</button>
+    <br>
+    <div id="bandNameOutput"></div>
+
+    <script>
+        function generateBandName() {
+            var city = document.getElementById('cityInput').value;
+            var petName = document.getElementById('petInput').value;
+            var bandName = city + ' ' + petName;
+            document.getElementById('bandNameOutput').innerText = "Your band name could be " + bandName;
+        }
+    </script>
+</body>
+</html>
